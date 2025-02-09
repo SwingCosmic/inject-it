@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [ "./src/*" ]
+    },
+    "outDir": "./lib",
+
+    
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+
+    "jsx": "preserve",
+    "importHelpers": true,
+    "strictFunctionTypes": false,
+    "moduleResolution": "node",
+    "useDefineForClassFields": true,
+    
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "types": ["reflect-metadata"]
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

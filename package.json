@@ -1,0 +1,19 @@
+{
+  "name": "inject-it",
+  "version": "0.1.0",
+  "description": "Strong-typed dependency injection for both node.js and browser.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LoveKicher",
+  "license": "MIT",
+  "devDependencies": {
+    "type-fest": "^4.34.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "disposablestack": "^1.1.7",
+    "reflect-metadata": "^0.2.2"
+  }
+}
