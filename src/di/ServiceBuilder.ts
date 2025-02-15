@@ -20,7 +20,7 @@ export class ServiceBuilder {
    */
   class<T extends {}>(constructor: { new(): T }, implementation?: string): this {
     const type = implementation || constructor;
-    this._serviceDefs.set(constructor, new ServiceDescription<T>(
+    this._serviceDefs.set(type, new ServiceDescription<T>(
       type,
       () => new constructor(),
       true

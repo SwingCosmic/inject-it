@@ -4,11 +4,17 @@
   "description": "Strong-typed dependency injection for both node.js and browser.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && tsc-alias",
+    "test": "jest"
   },
   "author": "LoveKicher",
   "license": "MIT",
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "tsc-alias": "^1.8.10",
+    "tslib": "^2.8.1",
     "type-fest": "^4.34.0",
     "typescript": "^5.2.2"
   },

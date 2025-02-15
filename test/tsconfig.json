@@ -1,24 +1,21 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "baseUrl": ".",
-    "declaration": true,
+    "module": "CommonJS",
     "importHelpers": true,
+    "baseUrl": ".",
     "types": [
       "reflect-metadata"
     ],
     "paths": {
-      "@/*": [ "./src/*" ]
+      "@/*": [ "../src/*" ]
     },
     "outDir": "./lib",
   },
   "include": [
-    "./src/**/*.ts",
-    "./src/**/*.js",
-    "./src/**/*.tsx"
+    "./**/*.ts"
   ],
   "exclude": [
     "node_modules"
   ],
-  "extends": "./tsconfig.base.json"
+  "extends": "../tsconfig.base.json"
 }
