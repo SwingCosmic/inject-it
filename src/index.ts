@@ -1,4 +1,5 @@
 import "disposablestack/auto";
+import "reflect-metadata";
 
 export * from "./di/ServiceBuilder";
 export * from "./di/ServiceContainer";

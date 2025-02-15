@@ -6,6 +6,7 @@ import { ServiceBuilder } from "@/di/ServiceBuilder";
 import { service } from "@/di/decorator/service";
 import { autowired } from "@/di/decorator/autowired";
 import { IAsyncInitialize } from "@/resource";
+import { ServiceModule } from "@/di/ServiceModule";
 
 interface TimeoutConfig {
   timeout: number;
@@ -41,6 +42,28 @@ describe("高级注入用法", () => {
       .constructorInject(AsyncInit, "IAsyncInit")
       .build();
 
+    const a1 = await container.resolveInitialized<AsyncInit>("IAsyncInit");
+    expect(a1.value).toBe(1);
+  });
+
+
+  test("模块注入", async () => {
+
+    const installer1: ServiceModule<{}> = (builder) => {
+      builder.instance({ timeout: 1000 }, "TimeoutConfig");
+    };
+
+    const installer2: ServiceModule<{}> = {
+      install: (builder) => {
+        builder.constructorInject(AsyncInit, "IAsyncInit");
+      }
+    };
+
+    const container = new ServiceBuilder()
+      .use(installer1)
+      .use(installer2)
+      .build();
+    
     const a1 = await container.resolveInitialized<AsyncInit>("IAsyncInit");
     expect(a1.value).toBe(1);
   });

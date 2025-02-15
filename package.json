@@ -1,12 +1,17 @@
 {
-  "name": "inject-it",
-  "version": "0.2.0",
+  "name": "@lovekicher/inject-it",
+  "version": "0.3.0",
   "description": "Strong-typed dependency injection for both node.js and browser.",
+  "type": "module",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc && tsc-alias",
     "test": "jest"
   },
+  "files": [
+    "lib"
+  ],
   "author": "LoveKicher",
   "license": "MIT",
   "devDependencies": {
@@ -21,5 +26,9 @@
   "dependencies": {
     "disposablestack": "^1.1.7",
     "reflect-metadata": "^0.2.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
